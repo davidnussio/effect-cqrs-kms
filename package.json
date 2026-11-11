@@ -1,0 +1,30 @@
+{
+  "name": "effect-cqrs-kms",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "register": "node src/main.ts register",
+    "show": "node src/main.ts show",
+    "forget": "node src/main.ts forget",
+    "demo": "node src/main.ts demo",
+    "reset": "rm -f data.sqlite data.sqlite-shm data.sqlite-wal",
+    "check": "tsc -p ."
+  },
+  "dependencies": {
+    "@effect/platform-node": "4.0.6",
+    "@effect/sql-sqlite-node": "4.0.6",
+    "@google-cloud/kms": "5.7.0",
+    "effect": "4.0.6",
+    "effect-cqrs": "file:./effect-cqrs-0.3.0.tgz"
+  },
+  "overrides": {
+    "@effect/platform-node-shared": "4.0.6"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "~5.9.0"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}
